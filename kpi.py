@@ -21,89 +21,40 @@ print(len(input("Digite o seu nome: ")))
 # print("Olá ", nome, " , o seu valor bônus foi de ",str(kpi))
 
 
-# #desafio 2
+#desafio 2
 
-# try:
-#     nome = input("Digite seu nome: ")
-#     if len(nome)==0:
-#         raise ValueError("O nome não pode estar vazio")
-#     elif any(char.isdigit() for char in nome):
-#         raise ValueError("O nome não deve conter números.")
-#     else:
-#         print("Nome válido:", nome)
-# except ValueError as e:
-#     print(e)
+try:
+    nome = input("Digite seu nome: ")
+    if len(nome)==0:
+        raise ValueError("O nome não pode estar vazio")
+    elif any(char.isdigit() for char in nome):
+        raise ValueError("O nome não deve conter números.")
+    else:
+        print("Nome válido:", nome)
+except ValueError as e:
+    print(e)
 
-# try:
-#     salario = float(input("Digite o valor do seu salário: "))
-#     if salario < 0:
-#         print("Por favor, digite um valor positivo para o salário.")
-# except ValueError:
-#     print("Entrada inválida para o salário. Por favor, digite um número.")
-
-# # Solicita ao usuário que digite o valor do bônus recebido e converte para float
-# try:
-#     bonus_recebido = float(input("Digite o valor do bônus recebido: "))
-#     if bonus_recebido < 0:
-#         print("Por favor, digite um valor positivo para o bônus.")
-# except ValueError:
-#     print("Entrada inválida para o bônus. Por favor, digite um número.")
-
-# # Assumindo uma lógica de cálculo para o bônus final e KPI
-# bonus_final = bonus_recebido * 1.2  # Exemplo, ajuste conforme necessário
-# kpi = (salario + bonus_final) / 1000  # Exemplo simples de KPI
-
-# # Imprime as informações para o usuário
-# print(f"Seu KPI é: {kpi:.2f}")
-# print(f"{nome}, seu salário é R${salario:.2f} e seu bônus final é R${bonus_final:.2f}.")
-
-# # print("Olá ", nome, " , o seu valor bônus foi de ",str(kpi))
-
-#desafio 3
-nome = ""
-salario = -1
-bonus = -1
-while(nome == ""):
-    try:
-        nome = input("Digite seu nome: ")
-        if len(nome)==0:
-            nome = ""
-            raise ValueError("O nome não pode estar vazio")
-            
-            
-        elif any(char.isdigit() for char in nome):
-            nome = ""
-            raise ValueError("O nome não deve conter números.")
-            
-        else:
-            print("Nome válido:", nome)
-            break
-    except ValueError as e:
-        print(e)
-        
-while(salario < 0):
-    try:
-        salario = float(input("Digite o valor do seu salário: "))
-        if salario < 0:
-            print("Por favor, digite um valor positivo para o salário.")
-    except ValueError:
-        salario = -1
-        print("Entrada inválida para o salário. Por favor, digite um número.")
+try:
+    salario = float(input("Digite o valor do seu salário: "))
+    if salario < 0:
+        print("Por favor, digite um valor positivo para o salário.")
+except ValueError:
+    print("Entrada inválida para o salário. Por favor, digite um número.")
 
 # Solicita ao usuário que digite o valor do bônus recebido e converte para float
-while(bonus <0):
-    try:
-        bonus = float(input("Digite o valor do bônus recebido: "))
-        if bonus < 0:
-            print("Por favor, digite um valor positivo para o bônus.")
-    except ValueError:
-        print("Entrada inválida para o bônus. Por favor, digite um número.")
+try:
+    bonus_recebido = float(input("Digite o valor do bônus recebido: "))
+    if bonus_recebido < 0:
+        print("Por favor, digite um valor positivo para o bônus.")
+except ValueError:
+    print("Entrada inválida para o bônus. Por favor, digite um número.")
 
 # Assumindo uma lógica de cálculo para o bônus final e KPI
-kpi = 1000 + salario*bonus/100
-
+bonus_final = bonus_recebido * 1.2  # Exemplo, ajuste conforme necessário
+kpi = (salario + bonus_final) / 1000  # Exemplo simples de KPI
 
 # Imprime as informações para o usuário
+print(f"Seu KPI é: {kpi:.2f}")
+print(f"{nome}, seu salário é R${salario:.2f} e seu bônus final é R${bonus_final:.2f}.")
 
-print("Olá ", nome, " , o seu valor bônus foi de ",str(kpi))
 # print("Olá ", nome, " , o seu valor bônus foi de ",str(kpi))
