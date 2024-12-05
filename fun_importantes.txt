@@ -1,0 +1,20 @@
+. Strings (str)
+
+    Métodos e operações:
+        .upper() (converte para maiúsculas)
+        .lower() (converte para minúsculas)
+        .strip() (remove espaços em branco no início e no final)
+        .split(sep) (divide a string em uma lista, utilizando sep como delimitador)
+        + (concatenação de strings)
+
+
+
+    Operações lógicas:
+        and (E lógico)
+        or (OU lógico)
+        not (NÃO lógico)
+        == (igualdade)
+        != (diferença)
+
+funçao replace
+formatado = entrada.replace(" ", "").lower()
